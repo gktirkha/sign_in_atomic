@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../login/atoms/sized_boxes.dart';
-import '../atom/account_balance.dart';
-import '../atom/account_details_text.dart';
-import '../atom/profile_pic.dart';
+import '../../../utils/sized_boxes.dart';
+import '../atoms/account_balance.dart';
+import '../atoms/account_details_text.dart';
+import '../atoms/profile_pic.dart';
 
 class AccountDetailsTile extends StatelessWidget {
   const AccountDetailsTile({

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../tokens/typography.dart';
-import '../../login/atoms/sized_boxes.dart';
-import '../atom/card_details.dart';
-import '../atom/rounded_rectangle.dart';
+import '../../../utils/sized_boxes.dart';
+import '../atoms/card_details.dart';
+import '../atoms/rounded_rectangle.dart';
 
 class CardMolecule extends StatelessWidget {
   const CardMolecule({

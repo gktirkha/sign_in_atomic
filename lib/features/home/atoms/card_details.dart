@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../tokens/typography.dart';
-import '../../login/atoms/sized_boxes.dart';
+import '../../../utils/sized_boxes.dart';
 
 class CardDetails extends StatelessWidget {
   const CardDetails({super.key, required this.detail, required this.heading});

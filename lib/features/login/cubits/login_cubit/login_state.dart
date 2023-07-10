@@ -10,8 +10,8 @@ class LoginInitial extends LoginState {
   const LoginInitial({required super.isLoading});
 }
 
-class Error extends LoginState {
-  const Error({required this.message, required super.isLoading});
+class LoginError extends LoginState {
+  const LoginError({required this.message, required super.isLoading});
   final String message;
 }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../login/atoms/sized_boxes.dart';
+import '../../../utils/sized_boxes.dart';
 
 class AccountActionTile extends StatelessWidget {
   const AccountActionTile({

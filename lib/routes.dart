@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'features/home/page/home_page.dart';
-import 'features/login/page/login_page.dart';
+import 'features/home/pages/home_page.dart';
+import 'features/login/pages/login_page.dart';
 
 abstract class RouteNames {
   static const String home = '/home';

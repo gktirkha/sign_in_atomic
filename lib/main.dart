@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'features/login/cubit/login_cubit.dart';
-import 'features/login/page/login_page.dart';
+import 'features/login/cubits/login_cubit/login_cubit.dart';
+import 'features/login/pages/login_page.dart';
 import 'routes.dart';
 
 void main() {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../atom/home_app_bar.dart';
-import '../organism/bottom_nav.dart';
+import '../atoms/home_app_bar.dart';
+import '../organisms/bottom_nav.dart';
 import '../templates/template_1.dart';
 import '../templates/template_2.dart';
 import '../templates/template_3.dart';

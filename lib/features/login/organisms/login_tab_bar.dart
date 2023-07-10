@@ -17,7 +17,7 @@ class LoginTabBar extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       width: double.maxFinite,
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(.2),
+        color: Colors.black.withOpacity(.2),
       ),
       child: ValueListenableBuilder(
         valueListenable: controller,

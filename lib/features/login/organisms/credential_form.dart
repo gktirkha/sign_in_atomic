@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../atoms/input_fields.dart';
-import '../atoms/sized_boxes.dart';
-import '../cubit/login_cubit.dart';
+import '../../../utils/sized_boxes.dart';
+import '../cubits/login_cubit/login_cubit.dart';
+import '../molecules/input_fields.dart';
 
 class CredentialForm extends StatelessWidget {
   const CredentialForm({super.key});

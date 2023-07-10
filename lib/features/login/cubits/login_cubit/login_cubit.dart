@@ -36,7 +36,7 @@ class LoginCubit extends Cubit<LoginState> {
 
       emit(const LoggedIn(isLoading: false));
     } catch (e) {
-      emit(Error(message: e.toString(), isLoading: false));
+      emit(LoginError(message: e.toString(), isLoading: false));
     } finally {
       emailController.clear();
       passwordController.clear();

@@ -3,12 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../routes.dart';
 import '../../../utils/loading.dart';
+import '../../../utils/sized_boxes.dart';
 import '../atoms/login_button.dart';
-import '../atoms/sized_boxes.dart';
 import '../atoms/welcome_message.dart';
-import '../cubit/login_cubit.dart';
-import '../organism/credential_form.dart';
-import '../organism/login_tab_bar.dart';
+import '../cubits/login_cubit/login_cubit.dart';
+import '../organisms/credential_form.dart';
+import '../organisms/error_dialog.dart';
+import '../organisms/login_tab_bar.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -33,8 +34,9 @@ class LoginPage extends StatelessWidget {
                 LoginTabBar(controller: showLogin),
                 const VSizedBox16(),
                 const CredentialForm(),
-                SizedBox(height: MediaQuery.of(context).size.height * .55),
+                const Spacer(),
                 LoginButton(controller: showLogin),
+                const VSizedBox16()
               ],
             ),
           ),
@@ -51,47 +53,10 @@ void loginBlocListener(BuildContext context, LoginState state) async {
   } else {
     LoadingScreen.instance().hide();
   }
-  if (state is Error) {
+  if (state is LoginError) {
     await showErrorDialog(context, state);
   }
   if (state is LoggedIn) {
     GenerateRoute.navigationKey.currentState?.pushNamed(RouteNames.loggedIn);
   }
-}
-
-Future<Object?> showErrorDialog(
-  BuildContext context,
-  Error state,
-) {
-  return showGeneralDialog(
-    barrierDismissible: false,
-    context: context,
-    pageBuilder: (context, animation, secondaryAnimation) {
-      return Center(
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(12),
-          child: Material(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(state.message),
-                  const VSizedBox16(),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(
-                        context,
-                      );
-                    },
-                    child: const Text('Retry'),
-                  )
-                ],
-              ),
-            ),
-          ),
-        ),
-      );
-    },
-  );
 }

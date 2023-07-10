@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../atom/account_actions_tile.dart';
+import '../atoms/account_actions_tile.dart';
 
 class CardActions extends StatelessWidget {
   CardActions({super.key});

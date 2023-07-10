@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../atom/center_text.dart';
+import '../atoms/center_text.dart';
 
 class Template2 extends StatelessWidget {
   const Template2({super.key});

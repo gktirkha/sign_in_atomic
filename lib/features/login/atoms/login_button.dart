@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../tokens/button_style.dart';
-import '../cubit/login_cubit.dart';
+import '../cubits/login_cubit/login_cubit.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../login/atoms/sized_boxes.dart';
+import '../../../utils/sized_boxes.dart';
 import '../molecules/account_details_tile.dart';
 import '../molecules/card_molecule.dart';
-import '../molecules/features.dart';
-import '../organism/card_actions.dart';
+import '../molecules/features_molecule.dart';
+import '../organisms/card_actions.dart';
 
 class Template4 extends StatelessWidget {
   const Template4({super.key});

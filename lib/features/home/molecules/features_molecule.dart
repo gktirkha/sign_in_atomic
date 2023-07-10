@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../atom/rounded_container.dart';
+import '../atoms/feature.dart';
 
 class Features extends StatelessWidget {
   const Features({super.key});
@@ -9,36 +9,23 @@ class Features extends StatelessWidget {
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData(iconTheme: const IconThemeData(color: Colors.deepPurple)),
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FeatureWidget(
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
+            onTap: () {},
           ),
           FeatureWidget(
-            child: Icon(Icons.search),
+            child: const Icon(Icons.search),
+            onTap: () {},
           ),
           FeatureWidget(
-            child: Icon(Icons.bar_chart),
+            child: const Icon(Icons.bar_chart),
+            onTap: () {},
           ),
         ],
       ),
-    );
-  }
-}
-
-class FeatureWidget extends StatelessWidget {
-  const FeatureWidget({
-    super.key,
-    required this.child,
-  });
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return RoundedContainer(
-      borderColor: Colors.deepPurple,
-      child: child,
     );
   }
 }
